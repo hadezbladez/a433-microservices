@@ -1,0 +1,33 @@
+version: "3.7"
+
+
+networks:
+  nwk-item-app:
+    name: nwk-item-app
+
+services:
+  item-db:
+    image: mongo
+    ports:
+    - "27017:27017"
+    restart: always
+    networks:
+    - nwk-item-app
+    volumes:
+    - app-db:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: '******'
+      MONGO_INITDB_ROOT_PASSWORD: '******'
+  item-app:
+    build: .
+    ports:
+    - "80:8080"
+    networks:
+    - nwk-item-app
+    restart: always
+    volumes:
+    - app-data:/data/app
+
+volumes:
+  app-data:
+  app-db:
