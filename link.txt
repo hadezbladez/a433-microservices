@@ -1,1 +1,3 @@
+https://hub.docker.com/repository/docker/hadezbladez/item-app
+https://hub.docker.com/r/hadezbladez/item-app
 docker pull hadezbladez/item-app:v1
