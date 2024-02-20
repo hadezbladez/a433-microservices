@@ -7,7 +7,7 @@ networks:
 
 services:
   item-db:
-    image: mongo
+    image: mongo:3
     restart: always
     networks:
     - nwk-item-app
@@ -23,9 +23,6 @@ services:
     networks:
     - nwk-item-app
     restart: always
-    volumes:
-    - app-data:/data/app
 
 volumes:
-  app-data:
   app-db:
