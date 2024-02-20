@@ -1,0 +1,1 @@
+docker pull hadezbladez/item-app:v1
