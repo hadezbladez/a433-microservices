@@ -15,7 +15,7 @@ services:
     - app-db:/data/db
   item-app:
     # build: .
-    image: item-app:v1
+    image: hadezbladez/item-app:v1
     ports:
     - "80:8080"
     networks:
